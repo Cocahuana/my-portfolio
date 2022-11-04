@@ -1,12 +1,19 @@
 import React from "react";
 import Wrapper from "../../Components/Wrapper/Wrapper";
 import MenuExample from "../../Components/MenuExample/MenuExample";
+import Container from "../../Components/Container/Container";
+import Led from "../../Components/Led/Led";
+import Protoboard from "../../Components/Protoboard/Protoboard";
 
 function Home() {
 	return (
-		<Wrapper>
-			<MenuExample />
-		</Wrapper>
+		<Container>
+			<Protoboard>
+				<Led />
+				<Led />
+				<Led />
+			</Protoboard>
+		</Container>
 	);
 }
 
