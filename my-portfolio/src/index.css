@@ -14,3 +14,11 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
+/* :root {
+	--black-800: #222222;
+	--white-800: #dddddd;
+	--bg-base-dark-mode: var(--black-800);
+	--bg-base-light-mode: var(--white-800);
+	--text-base-dark-mode: var(--white-800);
+	--text-base-white-mode: var(--dark-800);
+} */
