@@ -3,24 +3,22 @@ import Wrapper from "../../Components/Wrapper/Wrapper";
 import MenuExample from "../../Components/MenuExample/MenuExample";
 import styled from "styled-components";
 import useColorMode from "../../services/customHooks/useColorMode";
-
+import Toggler from "../../Components/Buttons/Toggler/Toggler";
+import {useDarkMode} from "../../services/customHooks/useDarkMode";
 const Container = styled.div`
 	width: 100%;
 	heigth: auto;
-	background-color: ${({color}) => color.bg};
-	color: ${({color}) => color.text};
+	background-color: ${({theme}) => theme.background};
+	color: ${({theme}) => theme.text};
 `;
 
 function Home() {
-	const [color, {setColor}] = useColorMode();
-	console.log("Color actual: ", color);
-	console.log("Set actual: ", setColor);
+	const [theme, themeToggler, mountedComponent] = useDarkMode();
+	// const [color, {setColor}] = useColorMode();
+	console.log(themeToggler);
 	return (
-		<Container color={color}>
-			<button type='button' onClick={setColor}>
-				Soy un boton xD
-			</button>
-			<p>Holaa</p>
+		<Container theme={theme}>
+			<Toggler theme={theme} toggleTheme={themeToggler} />
 		</Container>
 	);
 }
