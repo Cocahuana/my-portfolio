@@ -32,6 +32,7 @@ const Moon = styled.svg`
 `;
 
 const Toggler = ({theme, toggleTheme}) => {
+	console.log("button: ", theme);
 	return (
 		<Button onClick={toggleTheme}>
 			{theme === "light" ? (
