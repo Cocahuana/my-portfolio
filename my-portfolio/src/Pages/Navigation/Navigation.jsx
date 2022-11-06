@@ -1,23 +1,18 @@
-import React, {useState} from "react";
 import styled from "styled-components";
-import useColorMode from "../../services/customHooks/useColorMode";
-
+import Toggler from "../../Components/Buttons/Toggler/Toggler";
 const Container = styled.div`
 	width: 100%;
 	heigth: 100vh;
-	background-color: ${({color}) => color.bg};
-	color: ${({color}) => color.text};
+	background-color: ${({theme}) => theme.background};
+	color: ${({theme}) => theme.text};
 `;
 
-function Navigation() {
-	const [color, {setColor}] = useColorMode();
+function Navigation({theme, toggleTheme}) {
+	// const [color, {setColor}] = useColorMode();
 
 	return (
-		<Container color={color}>
-			<button type='button' onClick={setColor}>
-				Soy un boton xD
-			</button>
-			<p>Holaa</p>
+		<Container>
+			<Toggler theme={theme} toggleTheme={toggleTheme} />
 		</Container>
 	);
 }

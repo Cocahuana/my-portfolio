@@ -8,12 +8,8 @@ const Container = styled.div`
 	color: ${({theme}) => theme.text};
 `;
 
-function Home({theme, toggleTheme}) {
-	return (
-		<Container>
-			<Toggler theme={theme} toggleTheme={toggleTheme} />
-		</Container>
-	);
+function Home() {
+	return <Container></Container>;
 }
 
 export default Home;

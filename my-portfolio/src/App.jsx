@@ -12,15 +12,10 @@ function App() {
 	return (
 		<ThemeProvider theme={themeMode}>
 			<>
-				<Navigation />
+				<Navigation theme={theme} toggleTheme={themeToggler} />
 				<GlobalStyles />
 				<Routes>
-					<Route
-						path='/'
-						element={
-							<Home theme={theme} toggleTheme={themeToggler} />
-						}
-					/>
+					<Route path='/' element={<Home />} />
 				</Routes>
 			</>
 		</ThemeProvider>
